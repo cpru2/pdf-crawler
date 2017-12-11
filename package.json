@@ -1,0 +1,16 @@
+{
+  "name": "pdf-crawler",
+  "version": "0.0.0",
+  "description": "Crawls websites and returns all PDF's in CSV format",
+  "main": "index.js",
+  "author": "Courtney",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "url-parse": "^1.0.5",
+    "request": "^2.65.0",
+    "tabula-js": "1.0.1",
+    "highland": "^2.8.1",
+    "lodash": "^4.13.1"
+  }
+}

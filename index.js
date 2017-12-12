@@ -18,7 +18,6 @@ function getData(pdf) {
   let v = tabula(pdf, {area: '571.16, 0, 655.04, 611.06', columns: '428.96'}).streamCsv();
   let vi = tabula(pdf, {area: '654.83, 0, 669.04, 611.06', columns: '428.96'}).streamCsv();
   let report = _([i, ii, iii, iv, v, vi]).parallel(6);
-  var file = pdf.replace('pdf', 'csv');
   report
   .errors(function (err, push) {
         console.log('Caught error:', err.message);
@@ -38,7 +37,7 @@ function writeData() {
   });
 }
 
-writeData();
+// getData('codeup_late2016.pdf');
 
 // writeData();
 

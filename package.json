@@ -2,7 +2,7 @@
   "name": "pdf-crawler",
   "version": "0.0.0",
   "description": "Crawls websites and returns all PDF's in CSV format",
-  "main": "index.js",
+  "main": "crawler.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:cpru2/pdf-crawler.git"

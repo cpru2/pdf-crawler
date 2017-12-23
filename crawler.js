@@ -41,6 +41,7 @@ var readData = function readData(dir) {
           console.log('Caught error:', err.message);
     }).pipe(fs.createWriteStream(newPath));
   });
+  return newDir;
 }
 
 
@@ -58,9 +59,10 @@ function crawl(url, f) {
       var $ = cheerio.load(body);
       console.log("Page title: " + $('title').text());
       var arr = f($);
-      requestPdfs(arr);
-      console.log("PDF's in directory, data_pdf");
-
+      var dir = requestPdfs(arr);
+      console.log("PDF's in directory, " + dir);
+      readData(dir);
+      console.log("CSV's in " + newDir);
     }
   });
 }
@@ -81,6 +83,7 @@ function requestPdfs(arr) {
       request(x).pipe(fileStream);
     }
   });
+  return dir;
 }
 
 

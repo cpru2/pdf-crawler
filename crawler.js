@@ -5,7 +5,7 @@ var fs = require('fs');
 var _ = require('highland');
 const tabula = require('tabula-js');
 
-// don't really understand what this is doing - how to get just pdfs?
+// gets links from site
 var getLinks = function getLinks(x) {
   var attr = "a[href^='http']";
   var absoluteLinks = x(attr);
